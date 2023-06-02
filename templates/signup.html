@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+
+    <title>Html Generated</title>
+    <meta name="description" content="Figma htmlGenerator">
+    <meta name="author" content="htmlGenerator">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <script src="https://kit.fontawesome.com/6f6e87c662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="Background_Image"></div>
+    <div class="Sign_in_PopupContainer">
+      <div class="Sign_in_PopupContent">
+        <div class="Sign_in_Signin_Frame">
+          <span class="back_button" class="fa-solid fa-arrow-left fa-xl"></span>
+          <div class="Sign_in_LogoImage"></div>
+          <span class="Sign_in_Slogan">토익 단어 암기 도우미<br />Todan Todan Vocap</span >
+            <form class="sign-in-form" method="post">
+              {% csrf_token %}
+            <div class="input_box Sign_in_IDBOX">
+              <input name="username" type="text" class="Sign_in_IDBOX_Contents" placeholder="Username"/>
+            </div>
+            <span class="info">4~30글자 사이</span>
+            <div class="input_box Sign_in_PWBOX">
+              <input name="password1" type="password" class="Sign_in_PWBOX_Contents" placeholder="Password" />
+            </div>
+            <div class="input_box Sign_in_PWBOX_check">
+              <input name="password2" type="password" class="Sign_in_PWBOX_check_Contents" placeholder="Password 확인"/>
+            </div>
+            <button type="submit" class="Sign_in_Sign_in_Button">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="{% static 'js/signup.js' %}"></script>
+</html>
