@@ -1,0 +1,377 @@
+body {
+background-color: #071c38;
+}
+
+.before_logging_in_1_68 {
+background-color: #071c38;
+width: 100%;
+height: 100%;
+position: absolute;
+}
+
+.SideBar {
+background-color: #01070e;
+width: 25%;
+height: 100%;
+position: absolute;
+left: 0px;
+top: 0px;
+}
+
+.ProfilePicture {
+border-radius: 500px;
+background-color: rgba(
+    196.00000351667404,
+    196.00000351667404,
+    196.00000351667404,
+    1
+);
+width: 83.33333587646484px;
+height: 83.33332824707031px;
+position: absolute;
+left: 10px;
+top: 40px;
+}
+
+.UserHeadLine {
+margin-left: 10px;
+color: rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
+width: 95.83333587646484px;
+height: 45px;
+position: absolute;
+left: 100.16666412353516px;
+top: 67.5px;
+font-family: Inter;
+text-align: left;
+font-size: 20px;
+letter-spacing: 0;
+}
+
+.Log_in_Button {
+position: absolute;
+left: 30.83333396911621px;
+top: 20%;
+border: none;
+background-color: transparent;
+color: #fdf7f7;
+padding: 0;
+outline: none;
+cursor: pointer;
+font-size: 20px;
+}
+
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+z-index: 9999;
+}
+
+.Study_Text {
+width: 130px;
+height: 25px;
+position: absolute;
+left: 30.83333396911621px;
+top: 35%;
+}
+
+.Study_Text_info {
+color: rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
+width: 130px;
+height: 25px;
+position: absolute;
+left: 0px;
+top: 0px;
+font-family: Inter;
+text-align: left;
+font-size: 20px;
+letter-spacing: 0;
+}
+
+.Test_Text {
+width: 130px;
+height: 25px;
+position: absolute;
+left: 30.83333396911621px;
+top: 50%;
+}
+
+.Test_Text_info {
+color: rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
+width: 130px;
+height: 25px;
+position: absolute;
+left: 0px;
+top: 0px;
+font-family: Inter;
+text-align: left;
+font-size: 20px;
+letter-spacing: 0;
+}
+
+.Analysis__Text {
+width: 130px;
+height: 25px;
+position: absolute;
+left: 31px;
+top: 65%;
+}
+
+.Analysis__Text_info {
+color: rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
+width: 130px;
+height: 25px;
+position: absolute;
+left: 0px;
+top: 0px;
+font-family: Inter;
+text-align: left;
+font-size: 20px;
+letter-spacing: 0;
+}
+
+.SmoongImage {
+width: 515px;
+height: 566px;
+position: absolute;
+left: 40%;
+top: 20%;
+background-image: url(images/___1.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.LogoImage {
+width: 171.6666717529297px;
+height: 96.45188903808594px;
+position: absolute;
+left: 26.66666603088379px;
+top: 90%;
+background-image: url(/static/image/logo.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+z-index: 9999;
+}
+
+.popup-button {
+border: none;
+background-color: #071c38;
+color: #ffffff;
+padding: 8px 16px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 16px;
+}
+
+<!-- 로그인 투명팝업 Css -- > .Log_in_component_Popup_Format {
+width: 500px;
+height: 685.576171875px;
+position: absolute;
+}
+
+.Log_in_Login_Frame {
+background-color: rgba(0, 0, 0, 0.5);
+width: 500px;
+height: 653.7102661132812px;
+position: absolute;
+left: 0px;
+top: 0px;
+border-radius: 20px;
+}
+
+.Log_in_LogoImage {
+width: 181.9788055419922px;
+height: 102.2458267211914px;
+position: absolute;
+left: 159.0106201171875px;
+top: 11.484130859375px;
+background-image: url(images/component_6_3x_1.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.Log_in_Notification {
+color: rgba(255, 255, 255, 1);
+width: 380px;
+height: 47.70317077636719px;
+position: absolute;
+left: 60px;
+top: 244.69970703125px;
+font-family: Inter;
+text-align: center;
+font-size: 20px;
+letter-spacing: 0;
+}
+
+.Log_in_Slogan {
+color: rgba(
+    252.00000017881393,
+    222.00000196695328,
+    61.00000016391277,
+    1
+);
+width: 360px;
+height: 97.17314910888672px;
+position: absolute;
+left: 70px;
+top: 113.9576416015625px;
+font-family: Inter;
+text-align: center;
+font-size: 30px;
+letter-spacing: 0px;
+line-height: 40px;
+}
+
+.Log_in_IDBOX {
+background-color: rgba(
+    217.0000022649765,
+    217.0000022649765,
+    217.0000022649765,
+    1
+);
+width: 265.01763916015625px;
+height: 26.50177001953125px;
+position: absolute;
+left: 112.1907958984375px;
+top: 365.724365234375px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.Log_in_IDBOX_Contents {
+color: rgba(
+    115.81250354647636,
+    113.88229072093964,
+    113.88229072093964,
+    1
+);
+width: 249px;
+height: 18px;
+left: 114px;
+top: 368px;
+font-family: Inter;
+text-align: center;
+font-size: 20px;
+letter-spacing: 0;
+background-color: transparent;
+border: none;
+outline: none;
+}
+
+.Log_in_PWBOX {
+background-color: rgba(
+    217.0000022649765,
+    217.0000022649765,
+    217.0000022649765,
+    1
+);
+width: 265.01763916015625px;
+height: 26.50177001953125px;
+position: absolute;
+left: 112.1907958984375px;
+top: 425.7950439453125px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.Log_in_PWBOX_Contents {
+color: rgba(
+    115.81250354647636,
+    113.88229072093964,
+    113.88229072093964,
+    1
+);
+width: 249px;
+height: 18px;
+left: 121px;
+top: 430px;
+font-family: Inter;
+text-align: center;
+font-size: 20px;
+letter-spacing: 0;
+background-color: transparent;
+border: none;
+outline: none;
+}
+
+.Log_in_Login_Button {
+background-color: rgba(
+    252.00000017881393,
+    222.00000196695328,
+    61.00000016391277,
+    1
+);
+width: 265.01763916015625px;
+height: 53.886932373046875px;
+position: absolute;
+left: 110.424072265625px;
+top: 485.86572265625px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+font-size: 20px;
+}
+
+.Log_in_Sign_in_Button {
+background-color: rgba(0, 0, 0, 0.6000000238418579);
+color: rgba(255, 255, 255, 1);
+width: 265.01763916015625px;
+height: 53.88690185546875px;
+position: absolute;
+left: 110.424072265625px;
+top: 573.3215942382812px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+font-size: 20px;
+}
+
+.Log_in_PopupContainer {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+justify-content: center;
+align-items: center;
+z-index: 9999;
+}
+.Log_in_PopupContent {
+display: none;
+width: 500px;
+height: 685.576171875px;
+position: absolute;
+}
+
+.input_box{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.pointer{
+    cursor: pointer;
+}

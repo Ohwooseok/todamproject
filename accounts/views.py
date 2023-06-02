@@ -6,6 +6,8 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
+
+
 # 회원가입
 def signup(request):
     if request.method == 'POST':
@@ -44,3 +46,4 @@ def logout(request):
 # home
 def home(request):
     return render(request, 'home.html')
+

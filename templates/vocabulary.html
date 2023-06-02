@@ -1,0 +1,62 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>Html Generated</title>
+    <meta name="description" content="Figma htmlGenerator">
+    <meta name="author" content="htmlGenerator">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/voc.css' %}">
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="SideBar"></div>
+      <div class="ProfilePicture"></div>
+      {% if user.is_authenticated %}
+      <span class="UserHeadLine">{{ user }}</span>
+      {% else %}
+      <span class="UserHeadLine">User Unknown</span>
+      {% endif %}
+      <div class="LogoImage"></div>
+      {% if user.is_authenticated %}
+      <div class="pointer Study_Text">
+        <span class="Study_Text_info" onclick="location.replace('/study')" >Study</span>
+      </div>
+      <div class="pointer Test_Text">
+        <span class="Test_Text_info" onclick="location.replace('/test')" >Test</span >
+      </div>
+      <div class="pointer Analysis__Text">
+        <span class="Analysis__Text_info" onclick="location.replace('/vocabulary')" >Vocabulary</span >
+      </div>
+      {% else %}
+      <div class="pointer Study_Text">
+        <span class="Study_Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Study</span>
+      </div>
+      <div class="pointer Test_Text">
+        <span class="Test_Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Test</span >
+      </div>
+      <div class="pointer Analysis__Text">
+        <span class="Analysis__Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Vocabulary</span >
+      </div>
+      {% endif %}
+      <div class="SmoongImage"></div>
+
+      {% if user.is_authenticated %}
+      <button class="Log_in_Button" type="button" onclick="location.href='/logout'" >Logout</button>
+      {% else %}
+      <button class="Log_in_Button">Login</button>
+      {% endif %}
+    </div>
+      <!-- Header End -->
+      <div class="test_wrap">
+        <div class="test_box">
+          <div class="voc">{{voc.name}}asdf</div>
+          <button class="voc_add">추가</button>
+        </div>
+      </div>
+
+  </body>
+  <script src="{% static 'js/words.js' %}"></script>
+</html>

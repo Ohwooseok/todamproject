@@ -1,0 +1,75 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>Html Generated</title>
+    <meta name="description" content="Figma htmlGenerator">
+    <meta name="author" content="htmlGenerator">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body>
+    <div class="before_logging_in_1_68">
+      <div class="SideBar"></div>
+      <div class="ProfilePicture"></div>
+      {% if user.is_authenticated %}
+      <span class="UserHeadLine">{{ user }}</span>
+      {% else %}
+      <span class="UserHeadLine">User Unknown</span>
+      {% endif %}
+      <div class="LogoImage"></div>
+      {% if user.is_authenticated %}
+      <div class="pointer Study_Text">
+        <span class="Study_Text_info" onclick="location.replace('/study')" >Study</span>
+      </div>
+      <div class="pointer Test_Text">
+        <span class="Test_Text_info" onclick="location.replace('/test')" >Test</span >
+      </div>
+      <div class="pointer Analysis__Text">
+        <span class="Analysis__Text_info" onclick="location.replace('/vocabulary')" >Vocabulary</span >
+      </div>
+      {% else %}
+      <div class="pointer Study_Text">
+        <span class="Study_Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Study</span>
+      </div>
+      <div class="pointer Test_Text">
+        <span class="Test_Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Test</span >
+      </div>
+      <div class="pointer Analysis__Text">
+        <span class="Analysis__Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Vocabulary</span >
+      </div>
+      {% endif %}
+      <div class="SmoongImage"></div>
+
+      {% if user.is_authenticated %}
+      <button class="Log_in_Button" type="button" onclick="location.href='/logout'" >Logout</button>
+      {% else %}
+      <button class="Log_in_Button">Login</button>
+      {% endif %}
+
+      <div class="Log_in_PopupContainer">
+        <div class="Log_in_PopupContent">
+          <div class="Log_in_Login_Frame"></div>
+          <div class="Log_in_LogoImage"></div>
+          <span class="Log_in_Notification">모든 기능은 회원가입 이후에 가능합니다. 회원이시라면 아래를 통해 로그인을 해 주세요.</span>
+          <span class="Log_in_Slogan">토익 단어 암기 도우미<br />Todan Todan Vocap</span>
+          <form class="login-form" method="post">
+            {% csrf_token %}
+            <div class="input_box Log_in_IDBOX">
+              <input name="username" type="text" class="Log_in_IDBOX_Contents" placeholder="Username"/>
+            </div>
+            <div class="input_box Log_in_PWBOX">
+              <input name="password" type="password" class="Log_in_PWBOX_Contents" placeholder="Password"/>
+            </div>
+            <button class="Log_in_Login_Button" type="submit">Log in</button>
+            <button type="button" onclick="location.href='/signup'" class="Log_in_Sign_in_Button" >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="{% static 'js/script.js' %}"></script>
+</html>
+change the color of the text of the button in "Log_in_Button" into white.
