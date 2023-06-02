@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/words.css' %}">
+    <script src="https://kit.fontawesome.com/6f6e87c662.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Header -->
@@ -55,43 +56,26 @@
             <div class="test_button" onclick="hide()">ㅁ</div>
         </div>
         <div class="test_box">
-          {% for word in wordlists %}
-          <div class="word">
-              <div class="name">{{ word.word }}</div>
-              <div class="mean">{{ word.mean }}</div>
-          </div>
-          {%  endfor %}
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
-          <div class="word">
-            <div class="name">word</div>
-            <div class="mean">mean</div>
-          </div>
         </div>
       </div>
 
+
+
+
+
+
+
+    <!-- modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="close-major-i">&times;</span>
+          <br>
+          <div style="padding: 1rem; text-align: center;">
+            asdfasdfasdf
+          </div>
+      </div>
+  </div>
   </body>
+  <script src="{% static 'js/word_db.js' %}"></script>
   <script src="{% static 'js/words.js' %}"></script>
 </html>

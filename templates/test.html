@@ -7,7 +7,7 @@
     <meta name="author" content="htmlGenerator">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/study.css' %}">
+    <link rel="stylesheet" href="{% static 'css/test.css' %}">
   </head>
   <body>
     <!-- Header -->
@@ -41,7 +41,6 @@
         <span class="Analysis__Text_info" onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')" >Vocabulary</span >
       </div>
       {% endif %}
-      <div class="SmoongImage"></div>
 
       {% if user.is_authenticated %}
       <button class="Log_in_Button" type="button" onclick="location.href='/logout'" >Logout</button>
@@ -50,17 +49,13 @@
       {% endif %}
     </div>
       <!-- Header End -->
-      <div class="study_box_wrap">
-        <div class="study_box">
-          <span class="study_info">오늘의 단어 암기 목표량을 적어주세요. <br> 단어는 선택 단어 목록에서 임의로 선택되어 <br> 출제됩니다.</span>
-          <form action="" method="post"  id="form" >
-            <input id="amount" type="text" class="study_input">
-          </form>
-          <button class="study_confirm" onclick="open_word()">확인</button>
+      <div class="test_wrap">
+        <div class="test_box">
+            <div class="scoreboard">점수 : <span id="score">0</span></div>
         </div>
       </div>
 
   </body>
-  <script src="{% static 'js/script.js' %}"></script>
-  <script src="{% static 'js/study.js' %}"></script>
+  <script src="{% static 'js/word_db.js' %}"></script>
+  <script src="{% static 'js/test.js' %}"></script>
 </html>

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const jsonSignin = async (requestBody) => {
-      const response = await fetch("http://localhost:8080/auth/signin", {
+      const response = await fetch("http://localhost:8000/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const formSignin = async (formString) => {
-      const response = await fetch("http://localhost:8080/auth/signin", {
+      const response = await fetch("http://localhost:8000/signup", {
         method: "post",
         mode: 'cors',
         credentials: 'include',
@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (pw_in !== pw_check_in) {
         const notification = document.querySelector(".Sign_in_Notification");
-        notification.textContent = "비밀번호가 일치하지 않습니다";
-        notification.style.color = "red";
         return;
       }
 
