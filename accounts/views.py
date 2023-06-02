@@ -9,15 +9,17 @@ from django.shortcuts import render, redirect
 # 회원가입
 def signup(request):
     if request.method == 'POST':
-        if request.method == 'POST':
-            if request.POST['password1'] == request.POST['password2']:
-                user = User.objects.create_user(
-                                                username=request.POST['username'],
-                                                password=request.POST['password1'],)
+        username = request.POST['username']
+        if User.objects.filter(username=username):
+            return render(request, 'signup.html', {'error': '이미 존재하는 계정입니다.'})
+        if request.POST['password1'] == request.POST['password2']:
+            user = User.objects.create_user(
+                                            username=request.POST['username'],
+                                            password=request.POST['password1'],)
+        else:
+            return render(request, 'signup.html', {'error': '비밀번호가 일치하지 않습니다.'})
         auth.login(request, user)
-        return redirect('/')
-
-        return render(request, 'signup.html')
+        return redirect('login')
     return render(request, 'signup.html')
 
 # 로그인

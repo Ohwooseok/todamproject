@@ -383,7 +383,11 @@
     <div class="before_logging_in_1_68">
       <div class="SideBar"></div>
       <div class="ProfilePicture"></div>
+      {% if user.is_authenticated %}
+      <span class="UserHeadLine">{{ user }}</span>
+      {% else %}
       <span class="UserHeadLine">User Unknown</span>
+      {% endif %}
       <div class="LogoImage"></div>
       <div class="Study_Text">
         <span
@@ -403,12 +407,19 @@
         <span
           class="Analysis__Text_info"
           onclick="showPopup('비 정상적인 접근입니다. 로그인 이후 기능을 이용해 주세요.')"
-          >Analysis</span
+          >Vocabulary</span
         >
       </div>
       <div class="SmoongImage"></div>
 
+      {% if user.is_authenticated %}
+      <button class="Log_in_Button"
+              type="button"
+              onclick="location.href='/logout'"
+      >Logout</button>
+      {% else %}
       <button class="Log_in_Button">Login</button>
+      {% endif %}
 
       <div class="Log_in_PopupContainer">
         <div class="Log_in_PopupContent">
@@ -439,9 +450,9 @@
             />
             <button class="Log_in_Login_Button" type="submit">Log in</button>
             <button
-              type="button"
+                    type="button"
+              onclick="location.href='/signup'"
               class="Log_in_Sign_in_Button"
-              onclick="javascript:popupOpen()"
             >
               Sign In
             </button>

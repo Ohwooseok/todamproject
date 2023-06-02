@@ -261,21 +261,25 @@
           >토익 단어 암기 도우미<br />Todan Todan Vocap</span
         >
 
-        <form class="sign-in-form">
+        <form method="post">
+            {% csrf_token %}
           <div class="Sign_in_IDBOX"></div>
           <input
+          name="username"
             type="text"
             class="Sign_in_IDBOX_Contents"
             placeholder="Username"
           />
           <div class="Sign_in_PWBOX"></div>
           <input
+            name="password1"
             type="password"
             class="Sign_in_PWBOX_Contents"
             placeholder="Password"
           />
           <div class="Sign_in_PWBOX_check"></div>
           <input
+          name="password2"
           type="password"
           class="Sign_in_PWBOX_check_Contents"
           placeholder="PW를 다시 입력해주세요"/>
@@ -285,7 +289,7 @@
 
 
           <button type="submit" class="Sign_in_Sign_in_Button">Sign in</button>
-          <button type="button" class="Sign_in_Login_Button">Log In</button>
+          <button type="button" class="Sign_in_Login_Button" onclick="location.href='/login'">Log In</button>
         </form>
       </div>
     </div>
