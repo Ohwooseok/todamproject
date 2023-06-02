@@ -28,7 +28,7 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('home')
+            return redirect('login')
         else:
             return render(request, 'login.html', {'error': '아이디나 비밀번호가 올바르지 않습니다.'})
     else:
