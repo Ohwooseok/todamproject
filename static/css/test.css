@@ -7,12 +7,8 @@
     cursor: pointer;
 }
 
-.Log_in_Button {
+.Test_Text_info {
     color: rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);;
-}
-
-.Analysis__Text_info{
-    color: white;
 }
 
 .test_wrap{
@@ -20,6 +16,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    background-color: rgb(105, 173, 232);
     align-content: center;
 }
 
@@ -49,23 +46,17 @@
 
 .test_box{
     display: flex;
-    width: 300px;
+    width: 1000px;
     height: auto;
-    min-height: 400px;
-    background-color: rgba(47, 45, 45, 0.9);
+    background-color: rgba(80, 77, 77,0.9);
     margin: 50px;
-    margin-left: 800px;
-    margin-top: 200px;
+    margin-left: 500px;
     padding: 20px;
     border-radius: 25px;
     padding-left: 50px;
     padding-right: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
 }
 
 .word{
@@ -73,7 +64,8 @@
     height: 80px;
     display: flex;
     flex-direction: row;
-    font-size: ;
+    margin: 10px;
+    margin-top: 10px;
 }
 .name{
     text-align: center;
@@ -89,35 +81,24 @@
     color: white;
 }
 
-.voc{
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    margin: 10px;
-    text-align: center;
-}
-
-.voc_add{
-    width: 200px;
-    color: white;
-    background-color: transparent;
-    font-size: 20px;
-    margin-top: 40px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.new{
+.test_box button{
     color: black;
-    cursor: auto;
+    margin: 2px;
 }
 
-.new button{
-    background-color: aliceblue;
+.test_answer{
+    margin-left: 40px;
+    margin-bottom: 20px;
 }
 
-.fa-trash{
-    margin-left: 20px;
-    background-color: transparent;
-    color: white;
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    color: rgb(231, 24, 24);
+    display: block;
+    height: 30px;
+    width: 100%;
 }

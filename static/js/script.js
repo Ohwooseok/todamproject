@@ -1,3 +1,4 @@
+
 function showPopup(message) {
     var popup = document.createElement("div");
     popup.classList.add("popup");
@@ -27,10 +28,13 @@ function showPopup(message) {
     console.log(loginForm)
 
     const jsonLogin = async (requestBody) => {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("http://localhost:8000/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
+          'Access-Control-Allow-Origin': '*', // 요청을 허용하는 도메인을 설정합니다.
+          'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', // 허용되는 HTTP 메서드를 설정합니다.
+          'Access-Control-Allow-Credentials':"true",
         },
         body: JSON.stringify(requestBody),
       });
@@ -38,10 +42,13 @@ function showPopup(message) {
     };
 
     const formLogin = async (formData) => {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("http://localhost:8000/login", {
         method: "post",
         headers: {
           "Content-type": "applicaiton/x-www-from-urlencoded;charset=UTF-8",
+          'Access-Control-Allow-Origin': '*', // 요청을 허용하는 도메인을 설정합니다.
+          'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', // 허용되는 HTTP 메서드를 설정합니다.
+          'Access-Control-Allow-Credentials':"true",
         },
         body: formData,
       });
@@ -67,7 +74,7 @@ function showPopup(message) {
         return;
       } else {
         // Perform login or further processing
-        <!-- -[주석!!!!!!!!!! id_in이랑 pw_in이 저장됬는지 notification으로 출력되는 부분이예요.]- -->
+        // <!-- -[주석!!!!!!!!!! id_in이랑 pw_in이 저장됬는지 notification으로 출력되는 부분이예요.]- -->
 
         // json
         const loginData = {
